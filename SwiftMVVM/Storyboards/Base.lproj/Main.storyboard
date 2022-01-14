@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vAs-cg-GMz">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login-->
+        <scene sceneID="2AE-Id-hF2">
+            <objects>
+                <viewController id="m6o-AY-nTz" customClass="LoginViewController" customModule="SwiftMVVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nyt-xS-I9s">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pEH-eF-Ixy">
+                                <rect key="frame" x="30" y="138" width="354" height="34"/>
+                                <color key="backgroundColor" name="textFieldColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="email"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Zp6-NM-WAw">
+                                <rect key="frame" x="30" y="202" width="354" height="34"/>
+                                <color key="backgroundColor" name="textFieldColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Mk-pF-3Ux">
+                                <rect key="frame" x="162.5" y="272" width="89" height="40"/>
+                                <color key="backgroundColor" name="buttonBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="8" maxX="20" maxY="8"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginAction:" destination="m6o-AY-nTz" eventType="touchUpInside" id="UL8-4J-jA7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0nG-kP-cNU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zp6-NM-WAw" firstAttribute="leading" secondItem="pEH-eF-Ixy" secondAttribute="leading" id="9bg-jM-Ff0"/>
+                            <constraint firstItem="1Mk-pF-3Ux" firstAttribute="centerX" secondItem="pEH-eF-Ixy" secondAttribute="centerX" id="NDu-Zs-52T"/>
+                            <constraint firstItem="pEH-eF-Ixy" firstAttribute="top" secondItem="0nG-kP-cNU" secondAttribute="top" constant="50" id="V4Q-uy-Dnv"/>
+                            <constraint firstItem="Zp6-NM-WAw" firstAttribute="top" secondItem="pEH-eF-Ixy" secondAttribute="bottom" constant="30" id="ipM-Ek-PBj"/>
+                            <constraint firstItem="Zp6-NM-WAw" firstAttribute="centerX" secondItem="pEH-eF-Ixy" secondAttribute="centerX" id="jFn-9G-LFr"/>
+                            <constraint firstItem="pEH-eF-Ixy" firstAttribute="leading" secondItem="0nG-kP-cNU" secondAttribute="leading" constant="30" id="kaN-Ir-CSk"/>
+                            <constraint firstItem="1Mk-pF-3Ux" firstAttribute="top" secondItem="Zp6-NM-WAw" secondAttribute="bottom" constant="36" id="qts-22-zZj"/>
+                            <constraint firstItem="pEH-eF-Ixy" firstAttribute="centerX" secondItem="0nG-kP-cNU" secondAttribute="centerX" id="uSC-fb-ujm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Login" id="y8j-dG-4fM"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="pEH-eF-Ixy" id="27s-l3-EWY"/>
+                        <outlet property="loginButton" destination="1Mk-pF-3Ux" id="YlI-iN-5TY"/>
+                        <outlet property="passwordTextField" destination="Zp6-NM-WAw" id="IeY-1Y-e4e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eW7-bX-yfS" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2330.434782608696" y="91.071428571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Pqp-Wz-UlJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vAs-cg-GMz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Z62-lG-RhP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="m6o-AY-nTz" kind="relationship" relationship="rootViewController" id="bNz-MC-wcU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yib-cU-eYf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1420.289855072464" y="91.071428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="buttonBackgroundColor">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textFieldColor">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
